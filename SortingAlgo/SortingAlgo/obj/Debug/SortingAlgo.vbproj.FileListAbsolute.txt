@@ -22,3 +22,7 @@ D:\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.exe.config
 D:\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.exe
 D:\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.xml
 D:\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.pdb
+D:\SY_Projects\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.exe.config
+D:\SY_Projects\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.exe
+D:\SY_Projects\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.xml
+D:\SY_Projects\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.pdb
