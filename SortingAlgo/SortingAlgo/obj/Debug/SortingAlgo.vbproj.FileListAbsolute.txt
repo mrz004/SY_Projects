@@ -1,0 +1,32 @@
+c:\users\mrz\documents\visual studio 2012\Projects\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.exe.config
+c:\users\mrz\documents\visual studio 2012\Projects\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.exe
+c:\users\mrz\documents\visual studio 2012\Projects\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.pdb
+c:\users\mrz\documents\visual studio 2012\Projects\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.xml
+c:\users\mrz\documents\visual studio 2012\Projects\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.Form1.resources
+c:\users\mrz\documents\visual studio 2012\Projects\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.Resources.resources
+c:\users\mrz\documents\visual studio 2012\Projects\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.vbproj.GenerateResource.Cache
+c:\users\mrz\documents\visual studio 2012\Projects\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.exe
+c:\users\mrz\documents\visual studio 2012\Projects\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.xml
+c:\users\mrz\documents\visual studio 2012\Projects\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.pdb
+E:\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.exe.config
+E:\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.exe
+E:\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.xml
+E:\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.pdb
+E:\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.exe
+E:\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.pdb
+E:\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.xml
+E:\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.Form1.resources
+E:\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.Resources.resources
+E:\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.vbproj.GenerateResource.Cache
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.exe.config
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.exe
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.pdb
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\bin\Debug\SortingAlgo.xml
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.vbproj.AssemblyReference.cache
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.Form1.resources
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.Resources.resources
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.vbproj.GenerateResource.cache
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.vbproj.CoreCompileInputs.cache
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.exe
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.xml
+C:\Users\rohit\Downloads\SortingAlgo\SortingAlgo\obj\Debug\SortingAlgo.pdb
