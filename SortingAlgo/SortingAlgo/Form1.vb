@@ -2,6 +2,8 @@
 
 Public Class Form1
 
+    Shared random As New Random()
+
     Private Sub wait(ByVal interval As Integer)
         Dim sw As New Stopwatch
         sw.Start()
@@ -27,6 +29,11 @@ Public Class Form1
         array.Add(TextBox9)
         array.Add(TextBox10)
         delay = Val(TextBox11.Text)
+    End Sub
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        For Each i In array
+            i.text = random.Next(0, 100)
+        Next
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -97,7 +104,20 @@ Public Class Form1
     End Sub
 
     Sub SelectionSort()
-        'ToDo write the code for insertion sort and add all the features of other sorte in it
+        Dim minIndex As Short
+        For i = 1 To array.Count
+            minIndex = i
+            For j = i + 1 To array.Count
+                array(minIndex).BackColor = Color.Red
+                array(j).BackColor = Color.Pink
+                If Val(array(j).Text) < Val(array(minIndex).Text) Then
+                    array(minIndex).BackColor = Color.White
+                    minIndex = j
+                    array(minIndex).BackColor = Color.Red
+                    wait(delay)
+                End If
+            Next
+        Next
     End Sub
 
     Sub InsertionSort()

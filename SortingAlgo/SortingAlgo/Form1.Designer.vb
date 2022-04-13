@@ -44,9 +44,12 @@ Partial Class Form1
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -181,7 +184,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Controls.Add(Me.TextBox7)
-        Me.Panel1.Location = New System.Drawing.Point(94, 319)
+        Me.Panel1.Location = New System.Drawing.Point(146, 319)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1586, 155)
         Me.Panel1.TabIndex = 11
@@ -189,7 +192,7 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 22.0!, System.Drawing.FontStyle.Bold)
-        Me.Button1.Location = New System.Drawing.Point(599, 637)
+        Me.Button1.Location = New System.Drawing.Point(44, 27)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(278, 75)
         Me.Button1.TabIndex = 12
@@ -201,7 +204,7 @@ Partial Class Form1
         Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Bubble sort", "Selection sort", "Insertion sort"})
-        Me.ComboBox1.Location = New System.Drawing.Point(1066, 69)
+        Me.ComboBox1.Location = New System.Drawing.Point(1195, 65)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(251, 36)
         Me.ComboBox1.TabIndex = 13
@@ -214,7 +217,7 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Segoe UI Semibold", 22.0!, System.Drawing.FontStyle.Bold)
-        Me.Button2.Location = New System.Drawing.Point(921, 637)
+        Me.Button2.Location = New System.Drawing.Point(368, 27)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(278, 75)
         Me.Button2.TabIndex = 14
@@ -255,7 +258,7 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.TextBox11)
-        Me.Panel2.Location = New System.Drawing.Point(1380, 63)
+        Me.Panel2.Location = New System.Drawing.Point(1497, 63)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(310, 46)
         Me.Panel2.TabIndex = 18
@@ -265,19 +268,38 @@ Partial Class Form1
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(12, 340)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(0, 17)
+        Me.Label3.Size = New System.Drawing.Size(0, 16)
         Me.Label3.TabIndex = 11
+        '
+        'Button4
+        '
+        Me.Button4.Font = New System.Drawing.Font("Segoe UI Semibold", 22.0!, System.Drawing.FontStyle.Bold)
+        Me.Button4.Location = New System.Drawing.Point(692, 27)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(278, 75)
+        Me.Button4.TabIndex = 19
+        Me.Button4.Text = "Add Random Values"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.Button4)
+        Me.Panel3.Controls.Add(Me.Button2)
+        Me.Panel3.Controls.Add(Me.Button1)
+        Me.Panel3.Location = New System.Drawing.Point(546, 624)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1031, 148)
+        Me.Panel3.TabIndex = 20
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1702, 724)
+        Me.ClientSize = New System.Drawing.Size(1840, 811)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
@@ -287,6 +309,7 @@ Partial Class Form1
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -312,5 +335,6 @@ Partial Class Form1
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label3 As System.Windows.Forms.Label
-
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Button4 As Button
 End Class
