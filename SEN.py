@@ -3,44 +3,36 @@ from tkinter.filedialog import askopenfilename, asksaveasfilename
 from PIL import Image, ImageTk
 
 
-whidth = 1080
-hight = 720
+myWidth = 1080
+myHeight = 720
 
 root = Tk()
-root.geometry(f"{whidth}x{hight}")
+root.geometry(f"{myWidth}x{myHeight}")
 root.title("RJ-PhotoShope")
 root.iconbitmap("logo.ico")
 root.config(bg='#222')
 
+##### Added menuBar #####
+menuBar = Menu(root)
 
-img = Label(root)
-imgNotSet = True
-photo = None
-imgObj = None
+##### Added canvas #####
+canva = Canvas(root, width=myWidth-20, height=myHeight-20, bg='#ccc').pack(pady=40)
+canva.create_image(10, 10, anchor=NW, image=PhotoImage('D://SY_Projects//logo.png'))
 
-def openImg(openfileDilog=True):
+img = None
+
+def openImg():
     global img
-    global imgObj
-    global imgNotSet
-    global photo
-    if openfileDilog:
-        imgPath = askopenfilename(defaultextension=".png", filetypes=[("png", "*.png"),
-                                                                    ("jpg", "*.jpg"),
-                                                                    ("jpeg", "*.jpeg"),
-                                                                    ("All files", "*.*"), ])
-        imgObj = Image.open(imgPath)
-        photo = ImageTk.PhotoImage(imgObj)
-    if imgNotSet:
-        img = Label(midPart, image=photo).pack()
-        imgNotSet = False
-    else:
-        img.pack_forget()
-        img = Label(midPart, image=photo).pack()
-    # img = photo
-    photo = photo
+    global canva
+    imgPath = askopenfilename(defaultextension=".png", filetypes=[("png", "*.png"),
+                                                                ("jpg", "*.jpg"),
+                                                                ("jpeg", "*.jpeg"),
+                                                                ("All files", "*.*"), ])
+    img = Image.open(imgPath)
+    photo = ImageTk.PhotoImage(img)
+    canva.create_image(10, 10, anchor=NW, image=photo)
     root.update()
     print(imgPath)
-    print(imgNotSet)
 
 
 def saveImg():
@@ -59,10 +51,7 @@ def rotate90Clockwise():
     global imgObj, photo
     print(imgObj)
     imgObj =imgObj.rotate(-90)
-    photo = ImageTk.PhotoImage(imgObj)
-    photo = photo
     
-    root.update()
     imgObj.show()
 
 
@@ -85,15 +74,8 @@ def reflectImg():
 def cropImg():
     pass
 
-
-#############################################    Top part    #############################################
-topPart = Frame(root).pack(anchor=N, side=TOP)
-
-##### Added menuBar #####
-menuBar = Menu(root)
-
 ##### Added fileMenu #####
-fileMenu = Menu(menuBar, tearoff=0, font=("Times", 12))
+fileMenu = Menu(root, tearoff=0, font=("Times", 12))
 fileMenu.add_command(label="Open", command=openImg)
 fileMenu.add_command(label="Save", command=saveImg)
 fileMenu.add_separator()
@@ -102,7 +84,7 @@ fileMenu.add_command(label="Exit", command=quit)
 menuBar.add_cascade(label="File", menu=fileMenu)
 
 ##### Added EditMenu #####
-editMenu = Menu(menuBar, tearoff=0, font=("Times", 12))
+editMenu = Menu(root, tearoff=0, font=("Times", 12))
 editMenu.add_command(label="Rotate 90", command=rotate90Clockwise)
 editMenu.add_command(label="Rotate 90", command=rotate90AntiClockwise)
 editMenu.add_command(label="Rotate", command=rotateCustom)
@@ -113,14 +95,5 @@ editMenu.add_command(label="Crop", command=cropImg)
 menuBar.add_cascade(label="Edit", menu=editMenu)
 
 root.config(menu=menuBar)
-
-#############################################    Side left    #############################################
-sideLeft = Frame(root, padx=5, pady=0).pack(anchor=W, side=LEFT)
-
-#############################################    Middel part    #############################################
-midPart = Frame(root, padx=5, pady=0).pack(anchor=W, side=RIGHT)
-
-#############################################    Side right    #############################################
-sideRight = Frame(root, padx=5, pady=0).pack(anchor=E, side=RIGHT)
 
 root.mainloop()
