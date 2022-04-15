@@ -18,7 +18,7 @@ menuBar = Menu(root)
 ##### Added canvas #####
 canvas = Canvas(root, width=myWidth - 20, height=myHeight - 20, bg='#ccc')
 canvas.pack(pady=40)
-imgRef = PhotoImage(file="D:\SY_Projects\logo.png")
+imgRef = PhotoImage(file="D:\SY_Projects\SEN\logo.png")
 # canvas.create_image(10, 10, anchor=NW, image=imgRef)
 
 img = None
@@ -33,18 +33,22 @@ def openImg(imgpath=True):
                                                                       ("jpeg", "*.jpeg"),
                                                                       ("All files", "*.*"), ])
         img = Image.open(imgPath)
-        print(imgPath)
+        # print(imgPath)
     imgRef = ImageTk.PhotoImage(img)
     canvas.create_image(10, 10, anchor=NW, image=imgRef)
     root.update()
 
 
 def saveImg():
+    global img
+    # print(img)
     imgPath = asksaveasfilename(initialfile="Untitled.png", defaultextension=".png", filetypes=[("png", "*.png"),
                                                                                                 ("All files", "*.*"),
                                                                                                 ("jpg", "*.jpg"),
                                                                                                 ("jpeg", "*.jpeg"), ])
-    print(imgPath)
+    if img is not None:
+        img.save(imgPath)
+    # print(imgPath)
 
 
 def refresh():
@@ -85,7 +89,7 @@ def resizeImg():
     def apply():
         global img
         # Todo Fix the bug and make this function functional to use
-        img = img.resize((img.width*float(ScallingSize.get()), img.height*float(ScallingSize.get())))
+        img = img.resize((round(img.width*float(ScallingSize.get())), round(img.height*float(ScallingSize.get()))))
         openImg(imgpath=False)
         rotatBox.destroy()
 
