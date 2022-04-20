@@ -10,14 +10,14 @@ root = Tk()
 root.geometry(f"{myWidth}x{myHeight}")
 root.title("RJ-PhotoShope")
 root.iconbitmap("logo.ico")
-root.config(bg='#222')
+root.config(bg='#fff')
 
 ##### Added menuBar #####
 menuBar = Menu(root)
 
 ##### Added canvas #####
 canvas = Canvas(root, width=myWidth - 20, height=myHeight - 20, bg='#ccc')
-canvas.pack(pady=40)
+canvas.pack(padx=5, pady=50, fill="both")
 imgRef = PhotoImage(file="D:\SY_Projects\SEN\logo.png")
 # canvas.create_image(10, 10, anchor=NW, image=imgRef)
 
@@ -35,7 +35,7 @@ def openImg(imgpath=True):
         img = Image.open(imgPath)
         # print(imgPath)
     imgRef = ImageTk.PhotoImage(img)
-    canvas.create_image(10, 10, anchor=NW, image=imgRef)
+    canvas.create_image(canvas.winfo_width()/2-img.width/2, canvas.winfo_height()/2-img.height/2, anchor=NW, image=imgRef)
     root.update()
 
 
@@ -69,11 +69,10 @@ def rotate90AntiClockwise():
 
 
 def rotateCustom():
-
     def apply():
         global img
         # print(rotationAngle.get())
-        img = img.rotate(int(rotationAngle.get())*-1, expand=True)
+        img = img.rotate(int(rotationAngle.get()) * -1, expand=True)
         openImg(imgpath=False)
         rotatBox.destroy()
 
@@ -88,8 +87,7 @@ def rotateCustom():
 def resizeImg():
     def apply():
         global img
-        # Todo Fix the bug and make this function functional to use
-        img = img.resize((round(img.width*float(ScallingSize.get())), round(img.height*float(ScallingSize.get()))))
+        img = img.resize((round(img.width * float(ScallingSize.get())), round(img.height * float(ScallingSize.get()))))
         openImg(imgpath=False)
         rotatBox.destroy()
 
@@ -114,7 +112,25 @@ def reflectImgHorizontal():
 
 
 def cropImg():
-    pass
+    def apply():
+        global img
+        img = img.crop((int(topX.get()), int(topY.get()), int(botX.get()), int(botY.get())))
+        openImg(imgpath=False)
+        rotatBox.destroy()
+
+    rotatBox = Tk()
+    msg = Label(rotatBox, text="Enter top left X & Y coordinats of the image to be croped : ").grid(row=0, column=0, padx=20, pady=10)
+    topX = Entry(rotatBox)
+    topY = Entry(rotatBox)
+    topX.grid(row=1, column=0, padx=20, pady=10)
+    topY.grid(row=1, column=1, padx=20, pady=10)
+    msg = Label(rotatBox, text="Enter bottom right X & Y coordinats of the image to be croped : ").grid(row=2, column=0, padx=20, pady=10)
+    botX = Entry(rotatBox)
+    botY = Entry(rotatBox)
+    botX.grid(row=3, column=0, padx=20, pady=10)
+    botY.grid(row=3, column=1, padx=20, pady=10)
+    submit = Button(rotatBox, text="Apply", command=apply).grid(row=4, column=0, padx=20, pady=5)
+    rotatBox.mainloop()
 
 
 ##### Added fileMenu #####
