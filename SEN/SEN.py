@@ -16,18 +16,16 @@ root.config(bg='#fff')
 menuBar = Menu(root)
 
 ##### Added canvas #####
-canvas = Canvas(root, width=myWidth - 20, height=myHeight - 20, bg='#ccc')
-canvas.pack(padx=5, pady=50, fill="both")
-imgRef = PhotoImage(file="D:\SY_Projects\SEN\logo.png")
-# canvas.create_image(10, 10, anchor=NW, image=imgRef)
-
+canvas = Canvas(root, width=myWidth - 20, height=myHeight - 20, bg='#777')
+canvas.pack(padx=10, pady=10, fill="both")
+imgRef = None
 img = None
 
 
 def openImg(imgpath=True):
     global img
     global imgRef
-    if imgpath:
+    if imgpath is True:
         imgPath = askopenfilename(defaultextension=".png", filetypes=[("png", "*.png"),
                                                                       ("jpg", "*.jpg"),
                                                                       ("jpeg", "*.jpeg"),
@@ -155,5 +153,7 @@ editMenu.add_command(label="Crop", command=cropImg)
 menuBar.add_cascade(label="Edit", menu=editMenu)
 
 root.config(menu=menuBar)
+
+root.bind('<Configure>', openImg)
 
 root.mainloop()

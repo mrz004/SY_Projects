@@ -2,3 +2,4 @@
 settings.json
 *.class
 *.exe
+temp.*
