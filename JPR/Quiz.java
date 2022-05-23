@@ -16,6 +16,7 @@ public class Quiz {
   public static void main(String[] args) throws FileNotFoundException {
     int[] wins = new int[10];
     int choice;
+    Random rnd = new Random();
     File file = new File("q.txt");
     Scanner sc = new Scanner(file);
     Scanner con = new Scanner(System.in);
@@ -26,8 +27,7 @@ public class Quiz {
       }
     }
     for (int i = 0; i < 10; i++) {
-      Random rnd = new Random();
-      int rand = rnd.nextInt(6);
+      int rand = rnd.nextInt(20);
       System.out.println("Q." + (i + 1) + ")" + questions[rand][0]);
       System.out.println("(1)" + questions[rand][1] + "\t\t\t\t\t" + "(2)" + questions[rand][2]);
       System.out.println("(3)" + questions[rand][3] + "\t\t\t\t\t" + "(4)" + questions[rand][4]);
