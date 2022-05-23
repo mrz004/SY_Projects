@@ -3,3 +3,4 @@ settings.json
 *.class
 *.exe
 temp.*
+*.iml
